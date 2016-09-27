@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26070FDA40805D224608B806 /* libPods-HWPopoverViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 695B16B24C9AE9D3A0101FF3 /* libPods-HWPopoverViewDemo.a */; };
+		C5A5B41B1D9AB22000341818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B41A1D9AB22000341818 /* main.m */; };
+		C5A5B41E1D9AB22000341818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B41D1D9AB22000341818 /* AppDelegate.m */; };
+		C5A5B4211D9AB22000341818 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B4201D9AB22000341818 /* ViewController.m */; };
+		C5A5B4241D9AB22000341818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4221D9AB22000341818 /* Main.storyboard */; };
+		C5A5B4261D9AB22000341818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4251D9AB22000341818 /* Assets.xcassets */; };
+		C5A5B4291D9AB22000341818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4271D9AB22000341818 /* LaunchScreen.storyboard */; };
+		C5A5B43E1D9AB40900341818 /* HWPopoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B43B1D9AB40900341818 /* HWPopoverCell.m */; };
+		C5A5B43F1D9AB40900341818 /* HWPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B43D1D9AB40900341818 /* HWPopoverView.m */; };
+		C5A5B4431D9AB88300341818 /* triangle_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4421D9AB88300341818 /* triangle_white@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16FEB327135C94760DC02CED /* Pods-HWPopoverViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopoverViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		695B16B24C9AE9D3A0101FF3 /* libPods-HWPopoverViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWPopoverViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE60B5AFC75B488E804B2098 /* Pods-HWPopoverViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopoverViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C5A5B4161D9AB22000341818 /* HWPopoverViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWPopoverViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A5B41A1D9AB22000341818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5A5B41C1D9AB22000341818 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5A5B41D1D9AB22000341818 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5A5B41F1D9AB22000341818 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C5A5B4201D9AB22000341818 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C5A5B4231D9AB22000341818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5A5B4251D9AB22000341818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5A5B4281D9AB22000341818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5A5B42A1D9AB22000341818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A5B43A1D9AB40900341818 /* HWPopoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverCell.h; sourceTree = "<group>"; };
+		C5A5B43B1D9AB40900341818 /* HWPopoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPopoverCell.m; sourceTree = "<group>"; };
+		C5A5B43C1D9AB40900341818 /* HWPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverView.h; sourceTree = "<group>"; };
+		C5A5B43D1D9AB40900341818 /* HWPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPopoverView.m; sourceTree = "<group>"; };
+		C5A5B4401D9AB60000341818 /* HWPopoverViewDemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverViewDemo.pch; sourceTree = "<group>"; };
+		C5A5B4421D9AB88300341818 /* triangle_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "triangle_white@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5A5B4131D9AB22000341818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26070FDA40805D224608B806 /* libPods-HWPopoverViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5A5B40D1D9AB22000341818 = {
+			isa = PBXGroup;
+			children = (
+				C5A5B4381D9AB40900341818 /* HWPopoverView */,
+				C5A5B4181D9AB22000341818 /* HWPopoverViewDemo */,
+				C5A5B4171D9AB22000341818 /* Products */,
+				D4D41002889931A2FD7EB6B6 /* Pods */,
+				C8044983FA803EEE9CB566EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C5A5B4171D9AB22000341818 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B4161D9AB22000341818 /* HWPopoverViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5A5B4181D9AB22000341818 /* HWPopoverViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B41C1D9AB22000341818 /* AppDelegate.h */,
+				C5A5B41D1D9AB22000341818 /* AppDelegate.m */,
+				C5A5B41F1D9AB22000341818 /* ViewController.h */,
+				C5A5B4201D9AB22000341818 /* ViewController.m */,
+				C5A5B4221D9AB22000341818 /* Main.storyboard */,
+				C5A5B4251D9AB22000341818 /* Assets.xcassets */,
+				C5A5B4271D9AB22000341818 /* LaunchScreen.storyboard */,
+				C5A5B42A1D9AB22000341818 /* Info.plist */,
+				C5A5B4191D9AB22000341818 /* Supporting Files */,
+			);
+			path = HWPopoverViewDemo;
+			sourceTree = "<group>";
+		};
+		C5A5B4191D9AB22000341818 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B41A1D9AB22000341818 /* main.m */,
+				C5A5B4401D9AB60000341818 /* HWPopoverViewDemo.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5A5B4381D9AB40900341818 /* HWPopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B4411D9AB87600341818 /* resource */,
+				C5A5B4391D9AB40900341818 /* cell */,
+				C5A5B43C1D9AB40900341818 /* HWPopoverView.h */,
+				C5A5B43D1D9AB40900341818 /* HWPopoverView.m */,
+			);
+			path = HWPopoverView;
+			sourceTree = "<group>";
+		};
+		C5A5B4391D9AB40900341818 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B43A1D9AB40900341818 /* HWPopoverCell.h */,
+				C5A5B43B1D9AB40900341818 /* HWPopoverCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		C5A5B4411D9AB87600341818 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				C5A5B4421D9AB88300341818 /* triangle_white@2x.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		C8044983FA803EEE9CB566EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				695B16B24C9AE9D3A0101FF3 /* libPods-HWPopoverViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4D41002889931A2FD7EB6B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE60B5AFC75B488E804B2098 /* Pods-HWPopoverViewDemo.debug.xcconfig */,
+				16FEB327135C94760DC02CED /* Pods-HWPopoverViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5A5B4151D9AB22000341818 /* HWPopoverViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A5B42D1D9AB22000341818 /* Build configuration list for PBXNativeTarget "HWPopoverViewDemo" */;
+			buildPhases = (
+				4159D86B861857FE6ED27003 /* [CP] Check Pods Manifest.lock */,
+				C5A5B4121D9AB22000341818 /* Sources */,
+				C5A5B4131D9AB22000341818 /* Frameworks */,
+				C5A5B4141D9AB22000341818 /* Resources */,
+				81753EB4838D6963FA8E0FA5 /* [CP] Embed Pods Frameworks */,
+				4E81B597D2B843608521407C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HWPopoverViewDemo;
+			productName = HWPopoverViewDemo;
+			productReference = C5A5B4161D9AB22000341818 /* HWPopoverViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5A5B40E1D9AB22000341818 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = hwacdx;
+				TargetAttributes = {
+					C5A5B4151D9AB22000341818 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C5A5B4111D9AB22000341818 /* Build configuration list for PBXProject "HWPopoverViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5A5B40D1D9AB22000341818;
+			productRefGroup = C5A5B4171D9AB22000341818 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5A5B4151D9AB22000341818 /* HWPopoverViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5A5B4141D9AB22000341818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A5B4431D9AB88300341818 /* triangle_white@2x.png in Resources */,
+				C5A5B4291D9AB22000341818 /* LaunchScreen.storyboard in Resources */,
+				C5A5B4261D9AB22000341818 /* Assets.xcassets in Resources */,
+				C5A5B4241D9AB22000341818 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4159D86B861857FE6ED27003 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E81B597D2B843608521407C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81753EB4838D6963FA8E0FA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5A5B4121D9AB22000341818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A5B43E1D9AB40900341818 /* HWPopoverCell.m in Sources */,
+				C5A5B4211D9AB22000341818 /* ViewController.m in Sources */,
+				C5A5B41E1D9AB22000341818 /* AppDelegate.m in Sources */,
+				C5A5B41B1D9AB22000341818 /* main.m in Sources */,
+				C5A5B43F1D9AB40900341818 /* HWPopoverView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5A5B4221D9AB22000341818 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A5B4231D9AB22000341818 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5A5B4271D9AB22000341818 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A5B4281D9AB22000341818 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5A5B42B1D9AB22000341818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C5A5B42C1D9AB22000341818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5A5B42E1D9AB22000341818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE60B5AFC75B488E804B2098 /* Pods-HWPopoverViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = HWPopoverViewDemo/HWPopoverViewDemo.pch;
+				INFOPLIST_FILE = HWPopoverViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hwacdx.HWPopoverViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5A5B42F1D9AB22000341818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16FEB327135C94760DC02CED /* Pods-HWPopoverViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = HWPopoverViewDemo/HWPopoverViewDemo.pch;
+				INFOPLIST_FILE = HWPopoverViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hwacdx.HWPopoverViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5A5B4111D9AB22000341818 /* Build configuration list for PBXProject "HWPopoverViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A5B42B1D9AB22000341818 /* Debug */,
+				C5A5B42C1D9AB22000341818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5A5B42D1D9AB22000341818 /* Build configuration list for PBXNativeTarget "HWPopoverViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A5B42E1D9AB22000341818 /* Debug */,
+				C5A5B42F1D9AB22000341818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5A5B40E1D9AB22000341818 /* Project object */;
+}
