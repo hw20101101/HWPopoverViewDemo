@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26070FDA40805D224608B806 /* libPods-HWPopoverViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 695B16B24C9AE9D3A0101FF3 /* libPods-HWPopoverViewDemo.a */; };
+		C52B117A1D9ACF1A00E39089 /* triangle_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52B11781D9ACF1A00E39089 /* triangle_down@2x.png */; };
+		C52B117B1D9ACF1A00E39089 /* triangle_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C52B11791D9ACF1A00E39089 /* triangle_up@2x.png */; };
 		C5A5B41B1D9AB22000341818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B41A1D9AB22000341818 /* main.m */; };
 		C5A5B41E1D9AB22000341818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B41D1D9AB22000341818 /* AppDelegate.m */; };
 		C5A5B4211D9AB22000341818 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B4201D9AB22000341818 /* ViewController.m */; };
@@ -16,13 +18,14 @@
 		C5A5B4291D9AB22000341818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4271D9AB22000341818 /* LaunchScreen.storyboard */; };
 		C5A5B43E1D9AB40900341818 /* HWPopoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B43B1D9AB40900341818 /* HWPopoverCell.m */; };
 		C5A5B43F1D9AB40900341818 /* HWPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A5B43D1D9AB40900341818 /* HWPopoverView.m */; };
-		C5A5B4431D9AB88300341818 /* triangle_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5A5B4421D9AB88300341818 /* triangle_white@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16FEB327135C94760DC02CED /* Pods-HWPopoverViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopoverViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		695B16B24C9AE9D3A0101FF3 /* libPods-HWPopoverViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HWPopoverViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE60B5AFC75B488E804B2098 /* Pods-HWPopoverViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopoverViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HWPopoverViewDemo/Pods-HWPopoverViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C52B11781D9ACF1A00E39089 /* triangle_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "triangle_down@2x.png"; sourceTree = "<group>"; };
+		C52B11791D9ACF1A00E39089 /* triangle_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "triangle_up@2x.png"; sourceTree = "<group>"; };
 		C5A5B4161D9AB22000341818 /* HWPopoverViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWPopoverViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A5B41A1D9AB22000341818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5A5B41C1D9AB22000341818 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		C5A5B43C1D9AB40900341818 /* HWPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverView.h; sourceTree = "<group>"; };
 		C5A5B43D1D9AB40900341818 /* HWPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPopoverView.m; sourceTree = "<group>"; };
 		C5A5B4401D9AB60000341818 /* HWPopoverViewDemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverViewDemo.pch; sourceTree = "<group>"; };
-		C5A5B4421D9AB88300341818 /* triangle_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "triangle_white@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 		C5A5B4411D9AB87600341818 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				C5A5B4421D9AB88300341818 /* triangle_white@2x.png */,
+				C52B11781D9ACF1A00E39089 /* triangle_down@2x.png */,
+				C52B11791D9ACF1A00E39089 /* triangle_up@2x.png */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -203,10 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A5B4431D9AB88300341818 /* triangle_white@2x.png in Resources */,
 				C5A5B4291D9AB22000341818 /* LaunchScreen.storyboard in Resources */,
 				C5A5B4261D9AB22000341818 /* Assets.xcassets in Resources */,
+				C52B117A1D9ACF1A00E39089 /* triangle_down@2x.png in Resources */,
 				C5A5B4241D9AB22000341818 /* Main.storyboard in Resources */,
+				C52B117B1D9ACF1A00E39089 /* triangle_up@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

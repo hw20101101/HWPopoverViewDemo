@@ -14,7 +14,9 @@
 
 @interface HWPopoverView ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, assign) HWPopoverViewStyle style;
+@property (nonatomic, assign) CGFloat tableViewHeight;
+@property (nonatomic, strong) UIView  *backgroundView;
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) NSArray *icons;
 @property (nonatomic, strong) UITableView *tableView;
@@ -24,13 +26,16 @@
 
 @implementation HWPopoverView
 
-- (instancetype)initWithTitles:(NSArray *)titles icons:(NSArray *)icons didSelectCallBack:(void (^)(NSInteger selectIndex))didSelectCallBack
+- (instancetype)initWithTitles:(NSArray *)titles icons:(NSArray *)icons style:(HWPopoverViewStyle)style didSelectCallBack:(void (^)(NSInteger selectIndex))didSelectCallBack
 {
     if (self = [super init]) {
         _titles = titles;
         _icons  = icons;
+        _style  = style;
         _didSelectCallBack = didSelectCallBack;
+        _tableViewHeight = titles.count * kRowHeight - 1;//height - 1:隐藏最后一条分割线
         [self initUI];
+        [self updateConstraint];
     }
     return self;
 }
@@ -55,12 +60,9 @@
     //三角形图片
     self.triangleView = [UIImageView new];
     self.triangleView.alpha = 0;
-    self.triangleView.image = [UIImage imageNamed:@"triangle_white"];
     [window addSubview:self.triangleView];
     
     [self.triangleView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@66);
-        make.right.equalTo(@-15);
         make.size.mas_equalTo(CGSizeMake(22, 9));
     }];
     
@@ -73,11 +75,8 @@
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, kTableViewWidth, 0.5);
     [window addSubview:self.tableView];
     
-    CGFloat height = self.titles.count * kRowHeight - 1;//height - 1:隐藏最后一条分割线
     [self.tableView makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@-5);
-        make.top.equalTo(weakSelf.triangleView.bottom);
-        make.size.mas_equalTo(CGSizeMake(kTableViewWidth, height));
+        make.size.mas_equalTo(CGSizeMake(kTableViewWidth, weakSelf.tableViewHeight));
     }];
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -85,6 +84,64 @@
         weakSelf.triangleView.alpha = 1;
         weakSelf.tableView.alpha = 1;
     }];
+}
+
+- (void)updateConstraint
+{
+    __weak typeof(self) weakSelf = self;
+    
+    if(self.style == HWPopoverViewStyleDownRight){
+        
+        self.triangleView.image = [UIImage imageNamed:@"triangle_down"];
+        [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(@-15);
+            make.right.equalTo(@-15);
+        }];
+        
+        [self.tableView updateConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@-5);
+            make.bottom.equalTo(weakSelf.triangleView.top);
+        }];
+        
+    } else if(self.style == HWPopoverViewStyleDownLeft){
+        
+        self.triangleView.image = [UIImage imageNamed:@"triangle_down"];
+        [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(@-15);
+            make.left.equalTo(@15);
+        }];
+        
+        [self.tableView updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@5);
+            make.bottom.equalTo(weakSelf.triangleView.top);
+        }];
+        
+    } else if(self.style == HWPopoverViewStyleUpLeft){
+        
+        self.triangleView.image = [UIImage imageNamed:@"triangle_up"];
+        [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@66);
+            make.left.equalTo(@15);
+        }];
+        
+        [self.tableView updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@5);
+            make.top.equalTo(weakSelf.triangleView.bottom);
+        }];
+        
+    } else {
+        
+        self.triangleView.image = [UIImage imageNamed:@"triangle_up"];
+        [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@66);
+            make.right.equalTo(@-15);
+        }];
+        
+        [self.tableView updateConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(@-5);
+            make.top.equalTo(weakSelf.triangleView.bottom);
+        }];
+    }
 }
 
 #pragma mark - 透明背景视图点击事件
