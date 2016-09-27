@@ -6,6 +6,9 @@
 //  Copyright © 2016年 hw. All rights reserved.
 //
 
+#define kRowHeight 44
+#define kTableViewWidth 120
+
 #import "HWPopoverView.h"
 #import "HWPopoverCell.h"
 
@@ -54,6 +57,7 @@
     self.triangleView.alpha = 0;
     self.triangleView.image = [UIImage imageNamed:@"triangle_white"];
     [window addSubview:self.triangleView];
+    
     [self.triangleView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@66);
         make.right.equalTo(@-15);
@@ -66,14 +70,14 @@
     self.tableView.dataSource = self;
     self.tableView.scrollEnabled = NO;
     self.tableView.layer.cornerRadius = 4;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, kTableViewWidth, 0.5);
     [window addSubview:self.tableView];
     
-    CGFloat height = self.titles.count * 44;
+    CGFloat height = self.titles.count * kRowHeight - 1;//height - 1:隐藏最后一条分割线
     [self.tableView makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-5);
         make.top.equalTo(weakSelf.triangleView.bottom);
-        make.size.mas_equalTo(CGSizeMake(120, height));
+        make.size.mas_equalTo(CGSizeMake(kTableViewWidth, height));
     }];
     
     [UIView animateWithDuration:0.5 animations:^{
@@ -83,6 +87,7 @@
     }];
 }
 
+#pragma mark - 透明背景视图点击事件
 - (void)viewTapAction
 {
     __weak typeof(self) weakSelf = self;
@@ -90,7 +95,6 @@
         weakSelf.backgroundView.alpha = 0;
         weakSelf.triangleView.alpha = 0;
         weakSelf.tableView.alpha = 0;
-        weakSelf.alpha = 0;
         
     } completion:^(BOOL finished) {
         [weakSelf.backgroundView removeFromSuperview];

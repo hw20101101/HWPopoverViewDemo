@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNavigationItem];
-    self.title = @"HWActionSheetDemo";
+    self.title = @"HWPopoverViewDemo";
 }
 
 - (void)initNavigationItem

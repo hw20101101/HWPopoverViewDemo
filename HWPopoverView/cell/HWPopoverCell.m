@@ -37,7 +37,7 @@
     }];
     
     self.titleLabel = [UILabel new];
-    self.titleLabel.font = [UIFont systemFontOfSize:14];
+    self.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.contentView addSubview:self.titleLabel];
     [self.titleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakSelf);
@@ -53,7 +53,18 @@
 
 - (void)setIconName:(NSString *)iconName
 {
-    self.iconView.image = [UIImage imageNamed:iconName];
+    if (iconName) {
+        self.iconView.image = [UIImage imageNamed:iconName];
+    } else {        
+        __weak typeof(self) weakSelf = self;
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [self.titleLabel remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(weakSelf);
+            make.left.equalTo(@10);
+            make.right.equalTo(@-10);
+            make.height.equalTo(@15);
+        }];
+    }
 }
 
 - (void)awakeFromNib {
