@@ -38,8 +38,8 @@
     
     //透明背景视图
     self.backgroundView = [[UIView alloc] init];
+    self.backgroundView.alpha = 0;
     self.backgroundView.backgroundColor = RGB(100, 100, 100);
-    self.backgroundView.alpha = 0.5;
     self.backgroundView.userInteractionEnabled = YES;
     [self.backgroundView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapAction)]];
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
@@ -51,6 +51,7 @@
     
     //三角形图片
     self.triangleView = [UIImageView new];
+    self.triangleView.alpha = 0;
     self.triangleView.image = [UIImage imageNamed:@"triangle_white"];
     [window addSubview:self.triangleView];
     [self.triangleView makeConstraints:^(MASConstraintMaker *make) {
@@ -60,6 +61,7 @@
     }];
     
     self.tableView = [UITableView new];
+    self.tableView.alpha = 0;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.scrollEnabled = NO;
@@ -67,21 +69,38 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [window addSubview:self.tableView];
     
-    CGFloat height = self.titles.count * 45;
+    CGFloat height = self.titles.count * 44;
     [self.tableView makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-5);
         make.top.equalTo(weakSelf.triangleView.bottom);
         make.size.mas_equalTo(CGSizeMake(120, height));
     }];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.backgroundView.alpha = 0.1;
+        weakSelf.triangleView.alpha = 1;
+        weakSelf.tableView.alpha = 1;
+    }];
 }
 
 - (void)viewTapAction
 {
-    [self.backgroundView removeFromSuperview];
-    [self.tableView removeFromSuperview];
-    [self removeFromSuperview];
-    self.backgroundView = nil;
-    self.tableView = nil;
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.backgroundView.alpha = 0;
+        weakSelf.triangleView.alpha = 0;
+        weakSelf.tableView.alpha = 0;
+        weakSelf.alpha = 0;
+        
+    } completion:^(BOOL finished) {
+        [weakSelf.backgroundView removeFromSuperview];
+        [weakSelf.tableView removeFromSuperview];
+        [weakSelf.triangleView removeFromSuperview];
+        [weakSelf removeFromSuperview];
+        weakSelf.backgroundView = nil;
+        weakSelf.triangleView = nil;
+        weakSelf.tableView = nil;
+    }];
 }
 
 #pragma mark - UITableViewDataSource
