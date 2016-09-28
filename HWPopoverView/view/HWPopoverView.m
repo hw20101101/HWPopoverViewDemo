@@ -63,14 +63,13 @@
         _tableViewHeight = titles.count * kRowHeight - 1;//height - 1:隐藏最后一条分割线
         [self initUI];
         [self updateConstraint];
+        [self startAnimation];
     }
     return self;
 }
 
 - (void)initUI
 {
-    __weak typeof(self) weakSelf = self;
-    
     //透明背景视图
     self.backgroundView = [[UIView alloc] init];
     self.backgroundView.alpha = 0;
@@ -102,9 +101,15 @@
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, kTableViewWidth, 0.5);
     [window addSubview:self.tableView];
     
+    __weak typeof(self) weakSelf = self;
     [self.tableView makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(kTableViewWidth, weakSelf.tableViewHeight));
     }];
+}
+
+- (void)startAnimation
+{
+    __weak typeof(self) weakSelf = self;
     
     [UIView animateWithDuration:0.5 animations:^{
         weakSelf.backgroundView.alpha = 0.1;
