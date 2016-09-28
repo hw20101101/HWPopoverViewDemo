@@ -8,19 +8,46 @@
 
 #define kRowHeight 44
 #define kTableViewWidth 120
+#define RGB(r,g,b) ([UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f])
 
 #import "HWPopoverView.h"
 #import "HWPopoverCell.h"
 
 @interface HWPopoverView ()<UITableViewDelegate, UITableViewDataSource>
 
+/**
+ HWPopoverView的样式
+ */
 @property (nonatomic, assign) HWPopoverViewStyle style;
 @property (nonatomic, assign) CGFloat tableViewHeight;
+
+/**
+ 透明背景视图
+ */
 @property (nonatomic, strong) UIView  *backgroundView;
+
+
+/**
+ 标题数组
+ */
 @property (nonatomic, strong) NSArray *titles;
+
+
+/**
+ 图标数组
+ */
 @property (nonatomic, strong) NSArray *icons;
 @property (nonatomic, strong) UITableView *tableView;
+
+/**
+ 三角形图片
+ */
 @property (nonatomic, strong) UIImageView *triangleView;
+
+/**
+ 选中item之后的回调
+ */
+@property (nonatomic, copy) void (^didSelectCallBack)(NSInteger selectIndex);
 
 @end
 
@@ -90,7 +117,7 @@
 {
     __weak typeof(self) weakSelf = self;
     
-    if(self.style == HWPopoverViewStyleDownRight){
+    if(self.style == HWPopoverViewStyleRightBottom){
         
         self.triangleView.image = [UIImage imageNamed:@"triangle_down"];
         [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
@@ -103,7 +130,7 @@
             make.bottom.equalTo(weakSelf.triangleView.top);
         }];
         
-    } else if(self.style == HWPopoverViewStyleDownLeft){
+    } else if(self.style == HWPopoverViewStyleLeftBottom){
         
         self.triangleView.image = [UIImage imageNamed:@"triangle_down"];
         [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
@@ -116,7 +143,7 @@
             make.bottom.equalTo(weakSelf.triangleView.top);
         }];
         
-    } else if(self.style == HWPopoverViewStyleUpLeft){
+    } else if(self.style == HWPopoverViewStyleLeftTop){
         
         self.triangleView.image = [UIImage imageNamed:@"triangle_up"];
         [self.triangleView updateConstraints:^(MASConstraintMaker *make) {
