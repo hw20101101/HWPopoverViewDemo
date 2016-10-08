@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HWPopoverView"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "类似iPad中的UIPopoverController工具类"
 
   # This description is used to generate tags and improve search results.
@@ -131,6 +131,10 @@ Pod::Spec.new do |s|
    s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+   s.public_header_files = 'HWPopoverView/view/HWPopoverViewTool.h'
+   s.source_files = 'HWPopoverView/view/HWPopoverViewTool.h'
+
    s.dependency "Masonry"
 
 end

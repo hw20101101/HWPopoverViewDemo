@@ -7,7 +7,6 @@
 //
 
 #import "HWPopoverCell.h"
-#import "Masonry.h"
 
 @interface HWPopoverCell ()
 
