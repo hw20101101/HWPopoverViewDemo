@@ -12,6 +12,7 @@
 
 #import "HWPopoverView.h"
 #import "HWPopoverCell.h"
+#import "Masonry.h"
 
 @interface HWPopoverView ()<UITableViewDelegate, UITableViewDataSource>
 
