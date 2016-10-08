@@ -41,6 +41,7 @@
 		C5A5B4281D9AB22000341818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A5B42A1D9AB22000341818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A5B4401D9AB60000341818 /* HWPopoverViewDemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverViewDemo.pch; sourceTree = "<group>"; };
+		C5B0B2621DA941E300AAA65B /* HWPopoverView.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopoverView.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 			children = (
 				C52B11781D9ACF1A00E39089 /* triangle_down@2x.png */,
 				C52B11791D9ACF1A00E39089 /* triangle_up@2x.png */,
+				C5B0B2621DA941E300AAA65B /* HWPopoverView.pch */,
 			);
 			path = resource;
 			sourceTree = "<group>";
