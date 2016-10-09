@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HWPopoverView"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "类似iPad中的UIPopoverController工具类"
 
   # This description is used to generate tags and improve search results.
