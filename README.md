@@ -1,11 +1,16 @@
 # HWPopoverViewDemo
 
-###### 效果图：
+ 
 
 ![](0928_1.gif)
 
 
-###### 用法：
+### Requirements
+
+* iOS 7.0 or later
+	
+
+### How To Use
 
 ```
 	NSArray *titles = @[@"添加好友",@"多人会话",@"扫一扫"];
@@ -16,6 +21,25 @@
 
 ```
 
-###### 安装：
-* 下载此Demo之后，拖动HWPopoverView文件夹到项目中，导入HWPopoverView.h
-* 此工具类依赖Masonry，使用前请确保已导入或安装Masonry。
+### Installation
+ 
+Podfile
+
+```
+platform :ios, '7.0'
+pod 'HWPopoverView'
+```
+
+Complete the installation by executing:
+
+```
+$ pod install
+```
+
+##### Import headers in your source files
+
+In the source files where you need to use the library, import the header file:
+
+```
+#import "HWPopoverView.h"
+```
