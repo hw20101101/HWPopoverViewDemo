@@ -26,7 +26,6 @@
 Podfile
 
 ```
-platform :ios, '7.0'
 pod 'HWPopoverView'
 ```
 
@@ -43,3 +42,4 @@ In the source files where you need to use the library, import the header file:
 ```
 #import "HWPopoverView.h"
 ```
+
